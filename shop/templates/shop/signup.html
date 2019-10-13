@@ -1,0 +1,34 @@
+{% extends 'shop/basic.html'%}
+{%block title %} Sign Up {% endblock %}
+{% block body%}
+<div class="container mt-5">
+<form action="/shop/register/" method="post">{% csrf_token %}
+    <input type="hidden" name="itemJson" id="itemJson">
+    <div class="form-group">
+    <label for="firstname">First Name</label>
+    <input type="text" name="first_name" class="form-control" id="firstname" aria-describedby="First-Name" placeholder="Enter First Name">
+    <small id="First-Name" class="form-text text-muted">We'll never share your name with anyone else.</small>
+  </div>
+        <div class="form-group">
+    <label for="lastname">Last Name</label>
+    <input type="text" name="last_name" class="form-control" id="lastname" aria-describedby="Last-Name" placeholder="Enter Last Name">
+    <small id="Last-Name" class="form-text text-muted">We'll never share your name with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+            <div class="form-group">
+    <label for="mobile">Mobile Number</label>
+    <input type="tel" name="mobile" class="form-control" id="mobile" aria-describedby="Mobilee" placeholder="Enter Mobile Number">
+    <small id="Mobilee" class="form-text text-muted">We'll never share your Number with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <button type="submit" class="btn btn-success">Sign up</button>
+</form>
+</div>
+{% endblock %}
